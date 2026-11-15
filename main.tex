@@ -1,14 +1,102 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\documentclass[11pt,a4paper]{article}
 
-\title{Group C3 sschlaepfer FOEN}
-\author{sschlaepfer }
-\date{November 2026}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[ngerman,main=english]{babel}
+\usepackage{csquotes}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{microtype}
+
+% Bibliography: numeric, numbered in order of first citation (like the Word draft)
+\usepackage[
+  backend=biber,
+  style=numeric-comp,
+  sorting=none,
+  doi=true,
+  url=true,
+  isbn=false,
+  eprint=false,
+  maxbibnames=10
+]{biblatex}
+\addbibresource{references.bib}
+\renewcommand*{\multicitedelim}{\addsemicolon\space} % [1; 2, p. 2; 3]
+\DeclareFieldFormat{postnote}{#1}                    % page prefixes written explicitly
+\DeclareFieldFormat{multipostnote}{#1}
+
+% Clickable citations (jump to the reference list) and clickable URLs/DOIs
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true,
+  linkcolor=blue!60!black,
+  citecolor=blue!60!black,
+  urlcolor=blue!60!black,
+  pdftitle={Should the CiTru CO2 storage pilot go ahead?},
+  pdfauthor={Sylvie Schl\"apfer}
+}
+
+\newcommand{\COtwo}{CO\textsubscript{2}}
+
+\title{Should the CiTru \COtwo{} storage pilot go ahead?}
+\author{Sylvie Schläpfer (sschlaepfer)\\[0.5ex]
+  \small Draft statement, case C3: \COtwo{} storage in Swiss aquifers\\
+  \small Role play: expert of the Federal Office for the Environment (FOEN/BAFU)}
+\date{}
 
 \begin{document}
 
 \maketitle
 
-\section{Introduction}
+The Climate and Innovation Act (KlG, Art.~3) binds Switzerland to net-zero
+greenhouse gas emissions by 2050, by then permanent storage for about
+12\,Mt \COtwo{} per year is expected to be needed
+\cites{KlG}[p.~2]{FOEN2025Factsheet}{FOEN2025Legislation}.
+The Project CiTru, which would inject about 5--25\,kt \COtwo{} into an aquifer
+at about 1'100\,m depth at Trüllikon, with implementation planned for 2027
+\cites{GruberBrunner2026}{4401_2026}, raises the question of whether such a
+test should proceed before Swiss law has a storage regime.
+
+FOEN supports CiTru only as a time-limited research project and asks the Canton
+of Zurich, as licensing authority \cite[p.~6]{FOEN2025Factsheet}, to allow
+injection only once its status under waste law is settled and the authorisation
+requires an environmental assessment, independent monitoring with public data,
+binding seismic stop thresholds and a named body responsible for closure,
+aftercare and liability.
+
+The Federal Council wants hard-to-avoid \COtwo{} stored
+\foreignquote{ngerman}{nach Möglichkeit im Inland}, underground or in
+long-lived products, and expects export to remain a challenge
+\cite{Brupbacher2024}, but this aim cannot be tested or turned into sound law
+without field data, since the national estimate of 2'680\,Mt is a first
+appraisal that could not explicitly account for porosity, permeability, caprock
+capillary entry pressure or salinity \cite[pp.~427, 452]{Chevalier2010}, and
+the comparatively low permeability of the rock at Trüllikon is exactly what
+this test would examine \cite{Brupbacher2024}.
+
+Critics will object that \COtwo{} should not be injected before the law exists,
+since Switzerland has no national legislation for underground storage, such
+sites are not subject to an environmental impact assessment or the Major
+Accidents Ordinance, waste law provides no type of site where \COtwo{} may be
+deposited \cites[pp.~5--6]{FOEN2025Factsheet}[p.~109]{Affolter2024}, and
+post-injection responsibility is a long-recognised weak point of storage
+regulation \cite[pp.~255--257]{Benson2005}.
+% TODO from Word draft: "(Erdbenben?)" -- mention earthquakes/induced seismicity here?
+
+This objection is decisive for commercial storage, which must wait for the
+framework act planned for 2031 \cite[pp.~6, 8]{FOEN2025Factsheet}, but not for
+a test capped at 25\,kt, a quarter of the 100\,kt below which even the EU
+excludes research storage from its CCS Directive
+\cites[p.~13]{Affolter2024}{EU2009CCS}, provided a lawful basis is confirmed
+first; pre-screening also puts simulated pressure changes on the nearby
+Neuhausen Fault one to two orders of magnitude below reactivation levels and
+sets a red-light stop at about $M_\mathrm{w}$~2.0
+\cite[pp.~1, 11]{Schultz2024}, and swisstopo stresses that the test does not
+decide whether or where Switzerland will store \COtwo{} \cite{Brupbacher2024}.
+
+A strictly conditional, research-only CiTru therefore gives Switzerland the
+evidence it needs for its storage decision without pre-empting that decision or
+the law that must govern it.
+
+\printbibliography[title={References}]
 
 \end{document}
